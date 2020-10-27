@@ -20,14 +20,12 @@ System.out.println("Hello" + "World");
 数値
 
 ```
-int number;   
-number = 3;  
+int number = 3;   
 System.out.println(number);
 ```
 文字列
 
 ```
-String name;  
-name = "Taro" 
-System.out.println(name);  
+String name = "Taro";  
+System.out.println(name);
 ```
