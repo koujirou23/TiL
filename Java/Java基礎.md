@@ -34,3 +34,38 @@ System.out.println(name);
 name = "Satoshi";   
 number = 3;
 ```
+
+※少数をあつかうとき
+```
+double number = 3.0;
+```
+
+## 自動型変換
+文字と数値を組み合わせる時
+```
+System.out.println("私は"+25+"歳です");
+"私は"+ "25"+ "歳ですとString型に自動変換され文字列の結合が行われる。
+```
+
+int型とdouble型の計算の場合
+```
+System.out.println(5/2);      →　2と出力(int型)    
+System.out.println(5.0/2.0);  →　2.5と出力(double型)    
+System.out.println(5.0/2);    →  2.5と出力(double型に変換される)  
+```
+
+int型同士の計算
+```
+int number1 = 7;
+int number2 = 2;
+System.out.println(number1 / number2);
+```
+上記だと3が出力
+
+```
+System.out.println((double)number1/number2);
+```
+とすることでdouble型に変換され3.5と出力
+(double)number1とすることでint型からdouble型へ変換。
+片方がdouble型であればint型はdouble型へ自動変換されるため、(double)は１つ
+
