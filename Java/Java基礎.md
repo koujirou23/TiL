@@ -29,3 +29,8 @@ System.out.println(number);
 String name = "Taro";  
 System.out.println(name);
 ```
+※代入の時は変数名のみ
+```
+name = "Satoshi";   
+number = 3;
+```
