@@ -71,7 +71,7 @@ System.out.println((double)number1/number2);
 
 
 ## 論旨演算子
-じゃないのとき(!)
+じゃないのとき(!)  
 ()が必要
 ```
 !(x > 5)
