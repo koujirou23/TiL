@@ -89,6 +89,22 @@ if(条件式){
  }
  ```
  
- 
+ ##### switch
+ switch文では(条件の値)とcaseの値が等しい(==)のとき処理が実行される　　
+ ```
+ switch(x % 2){
+  case 0: //コロンが必要  
+    System.out.println("偶数です");
+    break; //breakが無いと次のcase処理を実行してしまう
+  case 1:
+    System.out.println("奇数です");
+    break;
+  default:  
+    System.out.println("無効な数字です"); //例
+    break;
+ }
+ ```
+ どのcaseとも一致しないときに実行する処理  
+ default(if文でいうelse)
  
  
