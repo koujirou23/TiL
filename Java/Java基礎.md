@@ -76,3 +76,19 @@ System.out.println((double)number1/number2);
 ```
 !(x > 5)
 ```
+
+### 条件分岐
+##### if 
+```
+if(条件式){  
+  処理;
+ }else if(条件式){
+  処理;
+ }else{  
+  処理;  
+ }
+ ```
+ 
+ 
+ 
+ 
