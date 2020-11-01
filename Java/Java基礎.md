@@ -69,3 +69,8 @@ System.out.println((double)number1/number2);
 (double)number1とすることでint型からdouble型へ変換。
 片方がdouble型であればint型はdouble型へ自動変換されるため、(double)は１つ
 
+
+## 論旨演算子
+じゃないのとき(!)
+()が必要
+!(x > 5)
