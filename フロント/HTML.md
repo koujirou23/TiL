@@ -16,3 +16,20 @@
     </li>
   </ul>
 ```
+
+### 説明リスト
+
+[![Image from Gyazo](https://i.gyazo.com/9131639189f86ea2da0fda8504fdb1e5.png)](https://gyazo.com/9131639189f86ea2da0fda8504fdb1e5)
+
+```
+  <dl>
+    <dt>HTML</dt>
+    <dd>HTMLの説明です</dd>
+
+    <dt>CSS</dt>
+    <dd>CSSの説明です</dd>
+
+    <dt>JavaScript</dt>
+    <dd>JavaScriptの説明です</dd>
+  </dl>
+```
