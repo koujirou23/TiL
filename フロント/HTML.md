@@ -42,3 +42,41 @@
 <p><small>&copy; company name </small></p>
 <p>&copy; company name</p>
 ```
+
+### コードの自動補完
+```
+<div id="container"></div> <!-- #container →　tab -->
+  <div class="cls"></div> <!-- .cls → tab -->
+  <span class="cls"></span> <!-- span.cls → tab -->
+  
+  <div id="container">      <!-- #container>.cls → tab -->
+    <div class="cls"></div>
+  </div>
+
+  <div id="container">    <!-- #container>.cls*6 →　tab -->
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+  </div>
+
+  <div id="container">    <!-- #container>.cls-$*6 →　tab -->
+    <div class="cls-1"></div>
+    <div class="cls-2"></div>
+    <div class="cls-3"></div>
+    <div class="cls-4"></div>
+    <div class="cls-5"></div>
+    <div class="cls-6"></div>
+  </div>
+
+  <div id="container">    <!-- #container>.cls-$$*6 →　tab -->
+    <div class="cls-01"></div>
+    <div class="cls-02"></div>
+    <div class="cls-03"></div>
+    <div class="cls-04"></div>
+    <div class="cls-05"></div>
+    <div class="cls-06"></div>
+  </div>
+```
