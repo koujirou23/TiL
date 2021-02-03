@@ -12,3 +12,4 @@ cursor: pointer;
   //easeをつけ変化に緩急をつけれる
   //transition: background-color 0.3s, color 2s;のように,で変化を分けることもできる
 ```
+
