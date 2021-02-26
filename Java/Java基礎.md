@@ -89,6 +89,10 @@ System.out.println((double)number1/number2);
 ()が必要
 ```
 !(x > 5)
+
+if (!((i % 2 == 0) && (i % 3 == 0))) {
+				System.out.println(2と3の公倍数ではありません);
+			}
 ```
 
 ### 条件分岐
