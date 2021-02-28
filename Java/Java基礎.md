@@ -198,3 +198,40 @@ if(条件式){
    System.out.println("彼の名前は" +names[i] + "です") 
  }
  ```
+ 
+ ### 拡張for文
+上記の配列の繰り返し処理を拡張forへ書き換える
+ ```
+ String[] names = {"John","Mike","Bob"};
+ for(string name: names){    // 変数nameに配列namesの要素が順に代入され、要素の数だけ自動的に繰り返しが行われる
+   System.out.println("私の名前は" +names+ "です");
+ }
+ ```
+ 
+ ### 繰り返し処理例題
+ 与えられた数字の奇数の和と偶数の和を計算
+ ```
+  int[] numbers = {1, 4, 6, 9, 13, 16}; //配列numbers
+    
+    int oddSum = 0;  //奇数
+    int evenSum = 0; //偶数
+    
+    for (int number : numbers) {
+      if (number % 2 == 0) {
+        evenSum += number;
+      } else {
+        oddSum += number;
+      }
+    }
+    
+    // ---- 拡張for文を用いない場合 ----
+    // for (int i = 0; i < numbers.length; i++) {
+    //   if (numbers[i] % 2 == 0) {
+    //     evenSum += numbers[i];
+    //   } else {
+    //     oddSum += numbers[i];
+    //   }
+    // }
+ ```
+ 
+ 
