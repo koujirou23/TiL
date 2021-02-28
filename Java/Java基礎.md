@@ -125,5 +125,76 @@ if(条件式){
  どのcaseとも一致しないときに実行する処理  
  default(if文でいうelse)
  
- ##　配列
+ #### while
+ 条件式がtrueである限り切り返し処理を行う
+ ```
+ int i = 1;
+ while (i <= 5){
+   System.out.println(i)
+   i++; //iに1を追加していく
+  }
+ ```
  
+ #### for
+ ```
+ for(int i=1; i <= 10; i++){  //forとは違い（）の中に変数、条件式などを記述する
+      System.out.println(i+"回目のループです");
+    }
+ ```
+ 
+ #### break cotinue
+ for,while文で繰り返し処理を終了(break)処理をスキップする(cotinue)がある。
+ 
+ ex
+ ```
+ for(int i = 1; i <= 10; i++){
+   if(i > 5){
+     break;
+   }
+   System.out.println(i);  // 5まで出力される
+ }
+ 
+ for(int i =1; i <= 10; i++){
+   if(i % 3 == 0){
+     cotinue;
+   }
+   System.out.println(i);  // 3の倍数のとき処理がスキップされる
+ 
+ ```
+ 
+ ## 配列
+ int(String)[]変数名 = {値1,値2,値3};  // Stringのときは値を""で囲む
+ 
+ 数字を持つとき
+ ```
+ int[] number = {4,5,6};
+ ```
+ 文字列の要素を持つとき
+ ```
+ String[] names = {"John","Kate","Bob"};
+ ```
+ 出力のするとき
+ ```
+ String[] names = {"John","Mike","Bob"};
+ System.out.println("彼の名前は" +names[0] + "です") // 彼の名前はJohnですと出力
+ ```
+ 代入
+ ```
+ String[] names = {"John","Mike","Bob"};
+ names[0] = "Taro";
+ System.out.println("彼の名前は" +names[0] + "です") // 彼の名前はTaroですと出力
+ ```
+ 
+ ### 配列の繰り返し
+ names.length が配列の要素の数が出力されることを利用する
+ ```
+ String[] names = {"John","Mike","Bob"};
+ System.out.println(names.length);  // 配列の要素数　３が出力される
+ ```
+ ので繰り返し処理の条件式に
+ ```
+ String[] names = {"John","Mike","Bob"};
+ for(int i = 0; i < names.length; i++ ){
+   System.out.println("彼の名前は" +names[i] + "です") 
+ }
+ ```
