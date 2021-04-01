@@ -4,10 +4,12 @@ src-main-java-com.example.demo-Application.java
         |
         L com.example.demo.controller - TopController
         |                             L NewController
+	|			      L UserController
         |
         L resources-static
                    L templates - top.html
                                L form - new.html
+			       L user - user.html
 ``` 
 
 
@@ -48,6 +50,22 @@ public class NewController {
 	
 }
 ```
+UserController
+```
+package com.example.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class UserController {
+	
+	@RequestMapping("user/user")
+	public String newPage() {
+		return "/user/user";
+	}
+}
+```
 
 top.html(簡単に書いた)
 ```
@@ -58,6 +76,7 @@ top.html(簡単に書いた)
 <body>
 <h1>toppage</h1>
 <a href = "new.html" th:href = "@{/form/new}">newpageへ</a>
+<a href = "user.html" th:href = "@{/user/user}">userpageへ</a>
 </body>
 </html>
 ```
@@ -72,4 +91,9 @@ new.html(簡単に書いた)
 <h1>new</h1>
 </body>
 </html>
+```
+
+user.html
+```
+<h1>user</h1>
 ```
