@@ -150,3 +150,83 @@ public class Main {
 
 }
 ```
+
+### シングルトン
+そのクラスのインスタンスが必ず１つであることを保証するデザインパターン  
+ほかから呼び出せれないようにする？  
+インスタンスの生成 newが使えないので呼び出し方を変更する必要がある
+```
+
+```
+package service;
+
+import java.util.ArrayList;
+
+import entity.Member;
+
+public class MemberServiceImpl implements MemberService {
+	
+	private static MemberServiceImpl singleton = new MemberServiceImpl();
+	
+	private MemberServiceImpl() {};
+	
+	public static MemberServiceImpl getInstance() {
+		return singleton;
+	}
+	
+	@Override
+	public String greet(int i) {
+		String[] greetings = {"Good Morning", "Hello", "Good Evening"};
+		return greetings[i];
+	}
+
+	@Override
+	public ArrayList<Member> getAll() {
+		ArrayList<Member> list = new ArrayList<>();
+		Member mem1 = new Member(1, "Linda", "lind@example.com");
+		Member mem2 = new Member(2, "James", "james@example.com");
+		list.add(mem1);
+		list.add(mem2);
+		
+		return list;
+	}
+
+	@Override
+	public int sumOf(int x, int y) {
+		int sum = 0;
+		for(int i  = x; i <= y; i++) {
+			sum += i;
+		}
+		return sum;
+	}
+
+}
+```
+package demo;
+
+import java.util.ArrayList;
+
+import entity.Member;
+import service.MemberService;
+import service.MemberServiceImpl;
+
+public class Main {
+
+	public static void main(String[] args) {					// 実行するメソッドなので
+//		MemberServiceImpl service = new MemberServiceImpl();   // インスタンス生成
+		MemberService service = MemberServiceImpl.getInstance();  // 呼び出し 実務だとインターフェイス名を使う　理由はImplが作られてないとかあったり、とにかく使いやすいようにする
+		System.out.println(service.greet(2));
+		
+		System.out.println(service.getAll());
+		ArrayList<Member> list = service.getAll();			                                 // Member list から値を取得するため　entityのmemberをimportする　
+		for(Member mem : list) {														    // 拡張for文 取り出す値を先に記述
+			System.out.println(mem.getId() + "," + mem.getName() + "," + mem.getEmail());  // 出力
+		}
+		
+		System.out.println(service.sumOf(3, 5));
+				
+	}
+
+}
+```
+
