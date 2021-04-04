@@ -82,7 +82,7 @@ public interface MemberService {
 }
 ```
 lmpl  
-データベースとのやりとり？ 
+データベースとのやりとり？   
 今回は使用してないけど  
 ```
 package service;
@@ -122,7 +122,7 @@ public class MemberServiceImpl implements MemberService {
 }
 ```
 
-main
+main  
 処理を書く
 ```
 package demo;
