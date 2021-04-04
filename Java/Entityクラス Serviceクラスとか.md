@@ -81,7 +81,9 @@ public interface MemberService {
 	ArrayList<Member> getAll();  // shift ctrl o でインポートできる
 }
 ```
-lmpl
+lmpl  
+データベースとのやりとり？ 
+今回は使用してないけど  
 ```
 package service;
 
